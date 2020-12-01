@@ -8,3 +8,6 @@ task:
     - printenv
     - whoami
     - uname -a
+    - exit 0
+    - echo "bye"
+
