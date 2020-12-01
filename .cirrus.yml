@@ -1,6 +1,6 @@
 container:
   image: alpine:latest
-  kvm: true
+  # kvm: true
 
 task:
   check_script:
@@ -8,6 +8,11 @@ task:
     - printenv
     - whoami
     - uname -a
-    - exit 0
-    - echo "bye"
-
+    - |
+      fn() {
+        echo myfn $1
+      }
+    - fn hello
+    - fn world
+    - exit 1
+    - echo wew
