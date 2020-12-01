@@ -1,0 +1,10 @@
+container:
+  image: alpine:latest
+  kvm: true
+
+task:
+  check_script:
+    - echo "hello"
+    - printenv
+    - whoami
+    - uname -a
